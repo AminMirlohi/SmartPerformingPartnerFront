@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="27" viewBox="0 0 26 27">
+    <defs>
+        <filter id="e4iig1k26a" width="205%" height="205%" x="-52.5%" y="-52.5%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.207140516 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <path id="1b4ruml0rb" d="M0 0L20 0 20 12.5 12.5 20 0 20z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <g filter="url(#e4iig1k26a)" transform="translate(-526 -252) translate(450 175) translate(57 61) translate(1) translate(0 .238) translate(21 17)">
+                                                    <mask id="9v1csvsbhc" fill="#fff">
+                                                        <use xlink:href="#1b4ruml0rb"/>
+                                                    </mask>
+                                                    <use fill="#FBDC40" xlink:href="#1b4ruml0rb"/>
+                                                    <rect width="7.5" height="1.25" x="3.75" y="3.75" fill="#D9AF0A" mask="url(#9v1csvsbhc)" rx=".625"/>
+                                                    <rect width="11.25" height="1.25" x="3.75" y="7.5" fill="#D9AF0A" mask="url(#9v1csvsbhc)" rx=".625"/>
+                                                    <path fill="#D9AF0A" d="M12.5 12.5H20V20H12.5z" mask="url(#9v1csvsbhc)"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

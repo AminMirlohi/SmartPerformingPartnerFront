@@ -1,0 +1,128 @@
+.form-control {
+    @include inputPlaceholder;
+    &:focus {
+        background-color: $theme-light-background;
+        outline: 0;
+        box-shadow: none;
+    }
+    &::placeholder {
+        color: #848484;
+    }
+    &.invalid {
+        text-align: left;
+        border: $input-error-color 1px solid !important;
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+    resize: vertical;
+}
+.form-invaild {
+    .form-control {
+        border: $input-error-color 1px solid !important;
+    }
+    .form-error {
+        @include font-italic;
+        text-align: right;
+        font-size: 12px;
+        margin: 2px 0 0;
+        color: $input-error-color;
+    }
+}
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+.form-characters {
+    @include position(absolute, null, 0, -15px);
+    @include font-italic;
+    font-size: 10px;
+    text-align: right;
+    margin: 5px 0 0;
+    color: $black;
+}
+.form-checkboxes {
+    @include flexProperty;
+    margin: 5px 0 10px;
+    .form-checkboxes-items {
+        margin: 0 0 28px;
+    }
+    .custom-checkbox {
+        margin: 0 50px 0 0;
+        font-size: 14px;
+        color: #212121;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+// Custom Checkboxes
+.custom-checkbox {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    @include font-regular;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark {
+            background-color: #d9f2ec;
+            border: solid 1px #d9f2ec;
+            &:after {
+                display: block;
+                left: 8px;
+                top: 5px;
+                width: 5px;
+                height: 9px;
+                border: solid $primary-button-color;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 23px;
+        width: 23px;
+        border-radius: 5px;
+        border: solid 1px #dadada;
+        background-color: $white;
+        &.circle {
+            border-radius: 100%;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+}
+
+.invalid {
+    @include font-mediumItalic;
+    text-align: right;
+    font-size: 12px;
+    margin: 2px 0 0;
+    color: $input-error-color;
+}
+

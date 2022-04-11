@@ -1,0 +1,104 @@
+.btn {
+  @include font-bold;
+  font-size: 15px;
+  border-radius: 4px;
+  height: auto;
+  min-width: 150px;
+  outline: 0;
+  border: transparent 1px solid;
+  box-shadow: none;
+  padding: 20px 10px;
+  text-transform: inherit;
+  @include media-breakpoint(sm) {
+    padding: 15px 10px;
+    font-size: 14px;
+    min-width: 130px;
+  }
+  &.default {
+    border-color: $border-button-color;
+    background-color: $white;
+    color: $list-color;
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $border-button-color;
+    }
+  }
+  &.primary {
+    border-color: $primary-button-color;
+    background-color: $primary-button-color;
+    color: $white;
+    &:hover,
+    &:focus,
+    &:active{
+      border-color: $primary-button-color;
+    }
+    &.disabled, &:disabled {
+      opacity: 0.5;
+    }
+  }
+  &.secondary {
+    @include flexProperty(center, center);
+    @include font-extraBold;
+    font-size: 20px;
+    border-radius: 8px;
+    min-width: 186px;
+    padding: 22px 42px;
+    border-color: $theme-light-background;
+    background-color: $theme-light-background;
+    color: $primary-button-color;
+    @include media-breakpoint(sm) {
+      font-size: 14px;
+      border-radius: 8px;
+      min-width: 130px;
+      padding: 15px;
+    }
+    &:hover,
+    &:focus,
+    &:active{
+      border-color: transparent;
+      color: $primary-button-color;
+    }
+    em {
+      font-size: 28px;
+      display: block;
+      margin: 0 0 0 5px;
+      @include media-breakpoint(sm) {
+        font-size: 20px;
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+  &.disabled, &:disabled {
+    opacity: 1;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+  }
+  &.small {
+    font-size: 15px;
+    min-width: 100px;
+    padding: 14px 8px;
+  }
+}
+
+
+
+.docs-btn {
+  display: block;
+  background: url('./assets/images/planning-icon.svg') no-repeat 10px center;
+  @include font-bold;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555;
+  margin: 0 20px 0 0;
+  border: solid 2px rgba(0, 0, 0, 0.4);
+  padding: 5px 15px 6px 30px;
+  min-width: 140px;
+  &:hover {
+    color: #555;
+  }
+}

@@ -1,0 +1,32 @@
+//-----------Custom variables will goes here
+
+// Default
+$white:                                         #fff;
+$black:                                         #000;
+$boxGradient:                                   0 12px 30px 0 rgba(0, 0, 0, 0.37);
+// Theme
+$theme-color:                                   #3f3f3f !default;
+$list-color:                                    #606060;
+$dark-color:                                    #232323 !default;
+$gray-color:                                    #949494;
+$theme-text:                                    #1a1a1a !default;
+$theme-secondary-text:                          #818181 !default;                          
+$theme-main-background:                         #ffffff !default;
+$theme-error-color:                             #f93a3a;
+$theme-light-background:                        #f2f8f6;
+// Button
+$primary-button-color:                          #3dbc9e !default;
+$error-button-color:                            #e02020;
+$light-button-color:                            #e6fff9;
+$border-button-color:                           #979797;
+// Form
+$input-background:                              #f2f8f6;
+$input-background-active:                       #c6f6eb;
+$input-placeholder:                             #313030;
+$input-error-color:                             #d3170a;
+$input-text-color:                              $input-placeholder;
+$border-color:                                  #e6e6e6;
+// info
+$success-color:                                 #5c9943;
+$info-color:                                    #f7b500;
+$cross-color:                                   #747474;

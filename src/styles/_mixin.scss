@@ -1,0 +1,288 @@
+@mixin vendor-prefixes($property, $value) {
+  #{$property}: $value;
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+}
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin noscrollbars {
+ &::-webkit-scrollbar {
+    display:none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@mixin scrollMenu {
+  overflow-y: scroll;
+  height: 100vh;
+  &::-webkit-scrollbar {
+    display:none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 0px -32px;
+  padding: 0px 32px;
+  //padding-left: 20px;
+}
+
+@mixin flexProperty($justifyContent: null,  $alignItems: null, $direction: null, $flexWrap: null) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $direction;
+  flex-wrap: $flexWrap;
+}
+
+@mixin font-mediumItalic {
+  font-family: 'robotomedium_italic', sans-serif;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin imageSize {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin font-regular {
+  font-family: 'muliregular', sans-serif;
+}
+@mixin font-medium {
+  font-family: 'mulimedium', sans-serif;
+}
+@mixin font-extraLight {
+  font-family: 'muliextralight', sans-serif;
+}
+@mixin font-light {
+  font-family: 'mulilight', sans-serif;
+}
+@mixin font-italic {
+  font-family: 'muliregularitalic', sans-serif;
+}
+@mixin font-bold {
+  font-family: 'mulibold', sans-serif;
+}
+@mixin font-semiBold {
+  font-family: 'mulisemibold', sans-serif;
+}
+@mixin font-extraBold {
+  font-family: 'muliextrabold', sans-serif;
+}
+@mixin font-black {
+  font-family: 'muliblack', sans-serif;
+}
+
+@mixin media-breakpoint($size) {
+  @if $size == xs {
+    @media (max-width: 766px) {
+      @content;
+    }
+  }
+  @else if $size == sm {
+    @media (max-width: 767px) {
+      @content; 
+    }
+  } @else if $size == md {
+    @media (min-width: 768px) {
+      @content; 
+    }
+  } @else if $size == lg {
+    @media (min-width: 1024px) {
+      @content; 
+    }
+  } @else if $size == xl {
+    @media (min-width: 1280px) {
+      @content; 
+    }
+  } @else if $size == xxl {
+    @media (min-width: 1367px) {
+      @content; 
+    }
+  }
+}
+
+@mixin videoIcon($size:false, $theme:false) {
+  @if $size == medium {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }@else if $size == dark {
+    width: 52px;
+    height: 52px;
+    font-size: 16px;
+  }@else {
+    width: 64px;
+    height: 64px;
+    font-size: 24px;
+  }
+  border-radius: 100%;
+  @if $theme == light {
+    background-color: rgba(255, 255, 255, 0.3);
+  }@else if $theme == dark {
+    background-color: rgba(0, 0, 0, 0.1);
+  }@else{
+    background-color: rgba(255, 255, 255, 0.09);
+  }
+  @include flexProperty(center, center);
+  color: $white;
+  flex: none;
+  em {
+    display: block;
+    margin: 0 0 0 2px;
+  }
+}
+
+@mixin pageHeading {
+  @include font-black;
+  font-size: 24px;
+  @include media-breakpoint(md) {
+    font-size: 30px;
+  }
+  @include media-breakpoint(xl) {
+    font-size: 41px;
+  }
+}
+
+@mixin pageInfo {
+  font-size: 15px;
+  line-height: 1.47;
+  color: $theme-color;
+  @include media-breakpoint(md) {
+    font-size: 17px;
+  }
+}
+
+@mixin pageParagraph {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $list-color;
+}
+
+@mixin backTitle {
+  @include font-black;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+@mixin backText {
+  @include font-bold;
+  font-size: 13px;
+  line-height: 1.62;
+}
+
+@mixin backIcon {
+  @include flexProperty(center, center);
+  width: 55px;
+  height: 55px;
+  margin: 0 18px 0 0;
+  border-radius: 100%;
+  background-color: $theme-light-background;
+  font-size: 18px;
+}
+
+
+@mixin textTabs {
+  display: flex;
+  list-style: none;
+  border: 0;
+  li {
+    border-bottom: #eaeaea 2px solid;
+    white-space: nowrap;
+    padding-right: 40px;
+    &:hover {
+      a {
+        color: $theme-color;
+      }
+    }
+    &.active {
+      a {
+        color: $primary-button-color;
+        @include font-bold;
+        border-bottom: $primary-button-color 2px solid;
+      }
+    }
+  }
+  a {
+    font-size: 17px;
+    text-transform: capitalize;
+    position: relative;
+    top: 2px;
+    padding: 20px;
+    display: block;
+    line-height: normal;
+    border: 0;
+    color: $black;
+  }
+}
+
+@mixin imagePlaceholder($size:false) {
+  margin: 0 10px 0 0;
+  @if $size == small {
+    width: 27px;
+    height: 27px;
+    box-shadow: none;
+  }@else {
+    width: 33px;
+    height: 33px;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.13);
+  }
+  flex: none;
+  overflow: hidden;
+  border-radius: 20px;
+  background: url('./assets/images/image-placeholder.svg') no-repeat;
+  // box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.13);
+  img {
+    @include imageSize;
+  }
+}
+
+@mixin inputPlaceholder {
+  @include font-bold;
+  height: auto;
+  padding: 20px 25px;
+  border-radius: 2px;
+  background-color: $theme-light-background;
+  font-size: 14px;
+  color: $input-placeholder;
+  border: 0;
+  line-height: 1.71;
+}
+
+@mixin inputLabel {
+  @include font-bold;
+  font-size: 17px;
+  line-height: 1.47;
+}
+
+@mixin boxShadow {
+  box-shadow: 0 5px 21px 0 rgba(0, 0, 0, 0.08);
+  background-color: $white;
+}
+
+@mixin borderStyled {
+  border-top: #979797 3px dashed;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    border-top: #fff 1px solid;
+  }
+}

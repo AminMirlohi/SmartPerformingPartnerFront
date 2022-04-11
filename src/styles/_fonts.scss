@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'muliblack';
+  src: url('./assets/fonts/muli-black-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mulibold';
+  src: url('./assets/fonts/muli-bold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'muliextralight';
+  src: url('./assets/fonts/muli-extralight-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-extralight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'muliregularitalic';
+  src: url('./assets/fonts/muli-italic-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mulilight';
+  src: url('./assets/fonts/muli-light-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mulisemibold';
+  src: url('./assets/fonts/muli-semibold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'muliregular';
+  src: url('./assets/fonts/muli-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'muliextrabold';
+  src: url('./assets/fonts/muli-extrabold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mulimedium';
+  src: url('./assets/fonts/muli-medium-webfont.woff2') format('woff2'),
+       url('./assets/fonts/muli-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./assets/fonts/icomoon.eot?3f01h9');
+  src:  url('./assets/fonts/icomoon.eot?3f01h9#iefix') format('embedded-opentype'),
+    url('./assets/fonts/icomoon.ttf?3f01h9') format('truetype'),
+    url('./assets/fonts/icomoon.woff?3f01h9') format('woff'),
+    url('./assets/fonts/icomoon.svg?3f01h9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon', sans-serif !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e900";
+}
+.icon-check:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e902";
+}
+.icon-arrow-left:before {
+  content: "\e922";
+}
+.icon-back:before {
+  content: "\e903";
+}
+.icon-caret-down:before {
+  content: "\e904";
+}
+.icon-caret-right:before {
+  content: "\e905";
+}
+.icon-caret-up:before {
+  content: "\e906";
+}
+.icon-cross:before {
+  content: "\e907";
+}
+.icon-headphones:before {
+  content: "\e908";
+}
+.icon-like:before {
+  content: "\e909";
+}
+.icon-prev:before {
+  content: "\e999";
+}
+.icon-next:before {
+  content: "\e902";
+}
+.icon-menu:before {
+  content: "\e9BD";
+}
